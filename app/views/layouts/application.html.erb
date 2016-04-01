@@ -3,7 +3,7 @@
 <head>
 	<title>Sinan Baymammadli</title>
 	<%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-	<%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+	
 	<%= csrf_meta_tags %>
 
 	<meta charset="utf-8">
@@ -54,19 +54,22 @@
 	<nav id="sidenav" class="menu">
 	   <div class="logo"><h1>SB</h1></div>
 	   <ul>
-	      <li>
-	      	<%= link_to "Blog", posts_path %>
-	      </li>
+			<li>
+				<%= link_to "Home", root_path %>
+			</li>
+			<li>
+				<%= link_to "Blog", posts_path %>
+			</li>
 	   </ul>
 	</nav>
 
 	<div id="container">
-	   <header>
-	  <div class="header-wrapper">
-	     <i class="toggle-btn material-icons fa fa-bars fa-4x"></i>
-	     <div class="avatar"><img src="images/avatar.png"><a href="#"></a></div>
-	  </div>
-	</header>
+		<header>
+		  <div class="header-wrapper">
+		     <i class="toggle-btn material-icons fa fa-bars fa-4x"></i>
+		     <div class="avatar"><img src="images/avatar.png"><a href="#"></a></div>
+		  </div>
+		</header>
 
 	   <main class="panel">
 	      
@@ -82,8 +85,9 @@
 			<span>@2016</span>
 
 			<div class="social">
-				<a href="#"><i class="fa fa-github-square fa-4x"></i></a>
-				<a href="#"><i class="fa fa-facebook-square fa-4x"></i></a>
+				<a href="//github.com/SinanBaymammadli" target="blank"><i class="fa fa-github-square fa-4x"></i></a>
+				<a href="//www.facebook.com/profile.php?id=100003869927373" target="blank"><i class="fa fa-facebook-square fa-4x"></i></a>
+				<a href="//twitter.com/s_baymammadli" target="blank"><i class="fa fa-twitter-square fa-4x"></i></a>
 			</div>
 		</footer>
 
@@ -91,5 +95,7 @@
 
 
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+
+		<%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
 	</body>
 </html>
