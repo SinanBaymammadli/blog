@@ -1,14 +1,95 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Blog</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  <%= csrf_meta_tags %>
+	<title>Sinan Baymammadli</title>
+	<%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+	<%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+	<%= csrf_meta_tags %>
+
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<!-- Disable tap highlight on IE -->
+	<!-- <meta name="msapplication-tap-highlight" content="no"> -->
+
+	<!-- Web Application Manifest -->
+	<!-- <link rel="manifest" href="manifest.json"> -->
+
+	<!-- Add to homescreen for Chrome on Android -->
+	<!-- <meta name="mobile-web-app-capable" content="yes">
+	<meta name="application-name" content="">
+	<link rel="icon" sizes="192x192" href="images/touch/chrome-touch-icon-192x192.png"> -->
+
+	<!-- Add to homescreen for Safari on iOS -->
+	<!-- <meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<meta name="apple-mobile-web-app-title" content="Web Starter Kit">
+	<link rel="apple-touch-icon" href="images/touch/apple-touch-icon.png"> -->
+
+	<!-- Tile icon for Win8 (144x144 + tile color) -->
+	<!-- <meta name="msapplication-TileImage" content="images/touch/ms-touch-icon-144x144-precomposed.png">
+	<meta name="msapplication-TileColor" content="#29B6F6"> -->
+
+	<!-- Color the status bar on mobile devices -->
+	<!-- <meta name="theme-color" content="#00BCD4"> -->
+
+	<!-- Fav Icon -->
+	<link rel="icon" href="images/favicon.ico" type="image/x-icon">
+
+	<!-- Google Font -->
+	<link href='https://fonts.googleapis.com/css?family=Raleway:400,300' rel='stylesheet' type='text/css'>
+
+	<!-- Font Awsome -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+
+	<!-- Google Material Icons -->
+	<!-- <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+	  rel="stylesheet"> -->
+
 </head>
 <body>
 
-<%= yield %>
+	<nav id="sidenav" class="menu">
+	   <div class="logo"><h1>SB</h1></div>
+	   <ul>
+	      <li>
+	      	<%= link_to "Blog", posts_path %>
+	      </li>
+	   </ul>
+	</nav>
 
-</body>
+	<div id="container">
+	   <header>
+	  <div class="header-wrapper">
+	     <i class="toggle-btn material-icons fa fa-bars fa-4x"></i>
+	     <div class="avatar"><img src="images/avatar.png"><a href="#"></a></div>
+	  </div>
+	</header>
+
+	   <main class="panel">
+	      
+			<div class="container">
+
+				<%= yield %>
+
+			</div>
+
+	   </main>
+
+	   <footer>
+			<span>@2016</span>
+
+			<div class="social">
+				<a href="#"><i class="fa fa-github-square fa-4x"></i></a>
+				<a href="#"><i class="fa fa-facebook-square fa-4x"></i></a>
+			</div>
+		</footer>
+
+	</div>
+
+
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+	</body>
 </html>
