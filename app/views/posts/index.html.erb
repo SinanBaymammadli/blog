@@ -9,6 +9,38 @@
 
 	<% end %>
 
-	
+	<%= will_paginate @posts %>
 
 </section>
+
+<style type="text/css">
+	
+	.pagination{
+		padding: 50px 0;
+	}
+
+	.pagination a, .pagination span{
+		padding: 20px;
+		color: #212121;
+		text-decoration: none;
+		font-size: 1.3rem;
+	}
+
+	.pagination .disabled{
+		color: #ADADAD;
+	}
+
+	.pagination .current{
+		background-color: #2196F3;
+		padding: 10px;
+		margin: 10px;
+		color: #ffffff;
+		font-style: normal;
+		font-size: 1.3rem;
+	}
+
+	.blog{
+		text-align: center;
+	}
+
+</style>
