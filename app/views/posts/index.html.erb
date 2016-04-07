@@ -1,1 +1,14 @@
-<h1>hello world</h1>
+<section class="blog">
+
+	<h1 class="underline">Stuff I have written</h1>
+
+	<% @posts.each do |post| %>
+
+		<h2><a href="post_show.html"><%= link_to post.title, post %></a></h2>
+		<p class="date"><%= post.created_at.strftime("%A, %b %d") %></p>
+
+	<% end %>
+
+	
+
+</section>
